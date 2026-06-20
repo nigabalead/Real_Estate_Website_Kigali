@@ -4,54 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kigali Real Estate</title>
-
-    <!-- CSS File -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- =========================
-         NAVBAR
-    ========================== -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                Kigali Real Estate
-            </div>
-
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-            </ul>
-        </nav>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="./Assets/Logo/Real_Estate_Logo.svg" alt="Kigali Real Estate Logo">
+        </div>
+        <a href="#contact" class="contact-link">Contact us</a>
     </header>
 
-    <!-- =========================
-         HERO SECTION
-    ========================== -->
+    <!-- Hero Section -->
     <section class="hero">
-
-        <img
-            src="./Assets/Images/Hero_Image.jpg"
-            alt="Luxury House in Kigali"
-            class="hero-image"
-        >
-
         <div class="hero-content">
-            <h1>
-                Find Your Dream Home <br>
-                in Kigali
-            </h1>
+            <h1>Find Your Dream Home in Kigali</h1>
+            <p>Explore homes, apartments, and investment opportunities.</p>
+            <a href="https://wa.me/250794948271" class="btn btn-yellow">Contact us on WhatsApp</a>
+        </div>
+    </section>
 
-            <p>
-                Explore homes, apartments, and investment opportunities.
-            </p>
+    <!-- Featured Listings -->
+    <section class="featured">
+        <h2>Featured Listings</h2>
 
-            <a href="https://wa.me/250700000000" class="whatsapp-btn">
-                Contact us on WhatsApp
-            </a>
+        <div class="listings-grid">
+
+            <!-- Listing 1 -->
+            <article class="listing-card">
+                <div class="listing-image">
+                    <img src="./Assets/Images/Featured_Listings_1.jpg" alt="House in Nyarutarama">
+                    <span class="badge">For sale</span>
+                </div>
+                <div class="listing-info">
+                    <p class="price">200, 000, 000 FRW</p>
+                    <p class="location">Nyarutarama, Kigali</p>
+                    <div class="details">
+                        <span>🛏 4 Beds</span>
+                        <span>🛁 3 Baths</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Listing 2 -->
+            <article class="listing-card">
+                <div class="listing-image">
+                    <img src="./Assets/Images/Featured_Listings_2.jpg" alt="Apartment in Kabuga">
+                    <span class="badge">For rent</span>
+                </div>
+                <div class="listing-info">
+                    <p class="price">1,500,000 FRW</p>
+                    <p class="location">Kabuga, Kigali</p>
+                    <div class="details">
+                        <span>🛏 2 Beds</span>
+                        <span>🛁 2 Baths</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Listing 3 -->
+            <article class="listing-card">
+                <div class="listing-image">
+                    <img src="./Assets/Images/Featured_Listings_3.jpg" alt="House in Kabuga">
+                    <span class="badge">For sale</span>
+                </div>
+                <div class="listing-info">
+                    <p class="price">400,000,000 FRW</p>
+                    <p class="location">Kabuga, Kigali</p>
+                    <div class="details">
+                        <span>🛏 2 Beds</span>
+                        <span>🛁 2 Baths</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What our clients say</h2>
+
+        <div class="testimonials-grid">
+
+            <article class="testimonial-card">
+                <img src="./Assets/Logo/Avatar_1.png" alt="Jean Claude N" class="avatar">
+                <div class="stars">
+                    <img src="./Assets/Logo/Rating_Star.png" alt="star">
+                    <img src="./Assets/Logo/Rating_Star.png" alt="star">
+                    <img src="./Assets/Logo/Rating_Star.png" alt="star">
+                    <img src="./Assets/Logo/Rating_Star.png" alt="star">
+                </div>
+                <p class="quote">They helped us find the perfect family home in Nyarutarama. Professional and friendly service from start to finish.</p>
+                <p class="client-name">Jean Claude N</p>
+            </article>
+
+            <article class="testimonial-card">
+                <img src="./Assets/Logo/Avatar_2.png" alt="Aline M" class="avatar">
+                <div class="stars">
+                    <img src="./Assets/Logo/Rating_Star.png" alt="star">
+                    <img src="./Assets/Logo/Rating_Star.png" alt="star">
+                    <img src="./Assets/Logo/Rating_Star.png" alt="star">
+                    <img src="./Assets/Logo/Rating_Star.png" alt="star">
+                </div>
+                <p class="quote">I rented an apartment through them and the process was smooth and transparent. Highly recommend!</p>
+                <p class="client-name">Aline M</p>
+            </article>
+
+            <article class="testimonial-card">
+                <img src="./Assets/Logo/Avatar_3.png" alt="Eric K." class="avatar">
+                <div class="stars">
+                    <img src="./Assets/Logo/Rating_Star.png" alt="star">
+                    <img src="./Assets/Logo/Rating_Star.png" alt="star">
+                    <img src="./Assets/Logo/Rating_Star.png" alt="star">
+                    <img src="./Assets/Logo/Rating_Star.png" alt="star">
+                </div>
+                <p class="quote">Great investment advice and excellent property options. Kigali Real Estate made selling our home easy.</p>
+                <p class="client-name">Eric K.</p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Contact & CTA -->
+    <section class="contact-section" id="contact">
+        <div class="contact-grid">
+
+            <div class="contact-box">
+                <h3>Ready to buy or sell</h3>
+                <p>Get expert guidance real estate professionals</p>
+                <a href="https://wa.me/250794948271" class="btn btn-yellow">Book a consultation</a>
+            </div>
+
+            <div class="contact-box">
+                <h3>Contact us</h3>
+                <ul class="contact-list">
+                    <li>
+                        <span class="icon">📞</span>
+                        <span>+250 794948271</span>
+                    </li>
+                    <li>
+                        <span class="icon">✉️</span>
+                        <span>Kigalirealestate@gmail.com</span>
+                    </li>
+                    <li>
+                        <span class="icon">📍</span>
+                        <span>Kigali, Rwanda</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="./Assets/Logo/Real_Estate_Logo.svg" alt="Kigali Real Estate Logo" class="footer-logo">
+                <p>Helping families find their dream homes in Kigali.</p>
+            </div>
+
+            <ul class="footer-contact">
+                <li>
+                    <span class="icon">📞</span>
+                    <span>+250 794948271</span>
+                </li>
+                <li>
+                    <span class="icon">✉️</span>
+                    <span>Kigalirealestate@gmail.com</span>
+                </li>
+                <li>
+                    <span class="icon">📍</span>
+                    <span>Kigali, Rwanda</span>
+                </li>
+            </ul>
         </div>
 
-    </section>
+        <hr class="footer-line">
+
+        <p class="copyright">© 2026 Kigali Real Estate. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>

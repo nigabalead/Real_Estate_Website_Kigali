@@ -1,129 +1,371 @@
-/* =========================
+/* =====================================
    RESET
-========================= */
+===================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================
-   BODY
-========================= */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f3f3f3;
+    font-family: Arial, sans-serif;
+    color: #000;
+    background-color: #fff;
 }
 
-/* =========================
+/* =====================================
    NAVBAR
-========================= */
+===================================== */
 .navbar {
     position: relative;
-    background-color: #ffffff;
-    height: 120px;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #fff;
 }
 
-/* Logo on the left */
-.logo {
-    position: absolute;
-    left: 70px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    font-size: 32px;
-    font-weight: bold;
-    color: #000;
+.logo img {
+    height: 80px;
+    width: auto;
 }
 
-/* Home perfectly centered */
-.nav-links {
-    list-style: none;
-
+.contact-link {
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
+    transform: translateX(-50%);
 
-.nav-links a {
     text-decoration: none;
     color: #000;
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 500;
 }
 
-/* =========================
+/* =====================================
    HERO SECTION
-========================= */
+===================================== */
 .hero {
+    background-image: url("./Assets/Images/Hero_Image.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 85vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 70px;
     position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
 }
 
-/* Background Image */
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Dark Overlay */
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.25);
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.15);
 }
 
-/* Hero Content */
 .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 80px;
-    transform: translateY(-50%);
-
-    z-index: 2;
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
 }
 
-/* Main Heading */
 .hero-content h1 {
-    font-size: 64px;
-    font-weight: 800;
+    font-size: 72px;
+    font-weight: 700;
     line-height: 1.1;
-
-    color: #000;
+    color: #fff;
     margin-bottom: 20px;
 }
 
-/* Paragraph */
 .hero-content p {
     font-size: 24px;
+    line-height: 1.5;
     color: #fff;
     margin-bottom: 35px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* WhatsApp Button */
-.whatsapp-btn {
+/* =====================================
+   BUTTONS
+===================================== */
+.btn {
     display: inline-block;
-
-    background-color: #b6b100;
-    color: #fff;
-
     text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-
-    padding: 16px 28px;
-    border-radius: 4px;
-
-    transition: background-color 0.3s ease;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-.whatsapp-btn:hover {
-    background-color: #8f8b00;
+.btn-yellow {
+    background-color: #A68F12;
+    color: #fff;
+}
+
+.btn-yellow:hover {
+    background-color: #8f7a0f;
+}
+
+/* =====================================
+   FEATURED LISTINGS
+===================================== */
+.featured {
+    padding: 80px 70px;
+}
+
+.featured h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.listings-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.listing-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.listing-card:hover {
+    transform: translateY(-5px);
+}
+
+.listing-image {
+    position: relative;
+}
+
+.listing-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #A68F12;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.listing-info {
+    padding: 20px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.location {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.details {
+    display: flex;
+    gap: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* =====================================
+   TESTIMONIALS
+===================================== */
+.testimonials {
+    padding: 80px 70px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.testimonials-grid {
+    display: flex;
+    gap: 40px;
+}
+
+.testimonial-card {
+    flex: 1;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.stars {
+    margin-bottom: 15px;
+}
+
+.stars img {
+    width: 20px;
+    height: 20px;
+}
+
+.quote {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.client-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* =====================================
+   CONTACT SECTION
+===================================== */
+.contact-section {
+    padding: 80px 70px;
+}
+
+.contact-grid {
+    display: flex;
+    gap: 60px;
+}
+
+.contact-box {
+    flex: 1;
+}
+
+.contact-box h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.icon {
+    font-size: 18px;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+.footer {
+    background-color: #2D2926;
+    color: #fff;
+    padding: 60px 70px 30px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    height: 60px;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    max-width: 300px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.footer-contact {
+    list-style: none;
+}
+
+.footer-contact li {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.footer-line {
+    border: none;
+    border-top: 1px solid #555;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+@media (max-width: 900px) {
+
+    .navbar,
+    .featured,
+    .testimonials,
+    .contact-section,
+    .footer {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .hero {
+        padding: 40px 25px;
+        min-height: 70vh;
+    }
+
+    .contact-link {
+        position: static;
+        transform: none;
+        margin-left: auto;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .listings-grid,
+    .testimonials-grid,
+    .contact-grid,
+    .footer-top {
+        flex-direction: column;
+    }
 }
