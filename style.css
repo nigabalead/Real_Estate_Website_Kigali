@@ -328,6 +328,11 @@ body {
     color: #aaa;
     font-size: 14px;
 }
+ .builder {
+     text-align:right;
+     color: white;
+     font-size: 14px;
+ }
 
 /* =====================================
    RESPONSIVE
