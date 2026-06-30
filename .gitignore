@@ -1,6 +1,12 @@
 # VS Code
 .vscode/
 
+# Assests
+.Assests/
+
+# Figma_UI_UX
+.Figma_UI_UX/
+
 # OS files
 .DS_Store
 Thumbs.db
